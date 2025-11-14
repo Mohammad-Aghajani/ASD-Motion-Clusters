@@ -1,0 +1,8 @@
+# Configuration for ST-GCN baseline evaluation
+stgcn:
+  repo_root: external/st-gcn
+  config: config/st_gcn/kinetics-skeleton/test.yaml
+  weights: checkpoints/kinetics-stgcn.pt
+  exported_embeddings: results/exports/stgcn_embeddings.npy
+  clustering_csv: results/exports/stgcn_cluster_summary.csv
+  social_score_csv: results/exports/stgcn_social_score_summary.csv

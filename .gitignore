@@ -1,0 +1,24 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pkl
+*.log
+
+# Environments
+.venv/
+.env/
+
+# Project outputs
+results/
+logs/
+reports/
+*.zip
+
+# Data placeholders
+data/poses/
+data/*.csv
+!data/README.md
+
+# VSCode / IDE
+.vscode/
+.idea/

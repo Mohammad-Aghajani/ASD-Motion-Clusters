@@ -1,0 +1,10 @@
+# Clustering-only overrides
+clustering:
+  regenerate_distance: false
+  regenerate_clustering: false
+  selected_metrics: [cosine, dtw]
+  selected_k: [4, 6]
+  ari_reference_k: 4
+outputs:
+  summary_csv: results/exports/social_score_summary.csv
+  fdr_csv: results/exports/social_score_summary_fdr.csv

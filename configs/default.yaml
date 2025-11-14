@@ -1,0 +1,18 @@
+# Default configuration for ASD-Motion-Clusters pipeline
+experiment:
+  emotions: [admiration, anger, despair, disgust, envy, fear, guilt, happiness, pride, sadness, shame, surprise]
+  rois: [head, left_hand, right_hand, lower_extremity]
+  velocity_features: [mean, max, auc, entropy]
+  acceleration_features: [mean, max, auc, entropy]
+  window:
+    fps: 30
+    length: 15
+    stride: 15
+  clustering:
+    k_values: [4, 6, 8]
+    distance_metrics: [cosine, euclidean, dtw, softdtw]
+paths:
+  pose_root: data/poses
+  metadata_csv: data/social_scores.csv
+  exports_dir: results/exports
+  figures_dir: figs
