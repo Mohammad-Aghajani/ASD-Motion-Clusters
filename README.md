@@ -124,5 +124,5 @@ Each file is documented inline in `kbc_cleaned.py` and matches the manuscript de
 
 Questions about the code or dataset access:
 
-- Mohammad Aghajani -- mohammad.aghajani@iu.edu
+- Mohammad Aghajani -- maghajan@iu.edu
 - Open an issue at https://github.com/Mohammad-Aghajani/ASD-Motion-Clusters/issues
