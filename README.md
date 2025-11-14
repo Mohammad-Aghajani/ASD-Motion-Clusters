@@ -36,19 +36,19 @@ The requirements cover the handcrafted feature pipeline plus the optional ST-GCN
 
 ```
 ASD-Motion-Clusters/
-├── configs/                 # YAML presets used by the paper
-├── data/README.md           # Instructions for provisioning raw pose/social data
-├── exports/                 # Sample CSV schemas for aggregated features & statistics
-├── figs/                    # Figures referenced in the manuscript
-├── scripts/                 # Stage-specific utilities (ingest, exports, ST-GCN helpers)
-├── src/asd_motion_clusters/ # Core implementation (kbc_cleaned + utils)
-├── kbc_cleaned.py           # Compatibility shim -> src/asd_motion_clusters/kbc_cleaned.py
-├── utils_cleaned.py         # Compatibility shim -> src/asd_motion_clusters/utils_cleaned.py
-├── run_clustering.py        # Minimal entry point for re-running k-means sweeps
-└── README.md
+├── configs/                 # default.yaml + clustering/stgcn overrides
+├── data/README.md           # how to stage raw pose + score files (data are external)
+├── exports/                 # sample CSV schemas referenced in the paper
+├── figs/                    # PDF/PNG figures used in the manuscript/supplement
+├── scripts/                 # helper utilities (ingest, analyses, ST-GCN baseline)
+├── src/asd_motion_clusters/ # core library (current kbc_cleaned.py + utils_cleaned.py)
+├── kbc_cleaned.py           # legacy entry point that imports from src/
+├── utils_cleaned.py         # legacy import shim for shared helpers
+├── run_clustering.py        # minimal driver to re-run clustering sweeps
+└── README.md / LICENSE / requirements.txt
 ```
 
-The compatibility shims keep historical import paths working (`python kbc_cleaned.py --force`) while exposing the packaged implementation under `asd_motion_clusters`.
+> **Note:** The current release keeps the ingestion, feature extraction, clustering, and statistical routines inside the historical `kbc_cleaned.py`. The earlier “ideal” outline (with `ingest/`, `features/`, `distances/`, etc.) remains a roadmap; as we refactor we will fan those modules out under `src/asd_motion_clusters/`. Until then the README documents the actual code layout so users can navigate the repo confidently.
 
 ---
 
